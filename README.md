@@ -47,3 +47,5 @@ All other code under MIT.
 `templates/resume-simple.tex` Thanks to [@jakeryank](https://github.com/jakeryang/resume) and [@sb2nov](https://github.com/sb2nov/resume/)
 
 `templates/resume.tex` Thanks to [@dnl-blkv](https://github.com/dnl-blkv/mcdowell-cv)
+
+Last updated 4/1/2022

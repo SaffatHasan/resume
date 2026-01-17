@@ -11,6 +11,7 @@ jobs:
       - run: pip install -r src/requirements.txt
       - run: python src/main.py resume
       - run: python src/main.py resume-simple
+      - run: python src/main.py two-column
       - name: upload generated latex
         uses: actions/upload-artifact@v6
         with:
@@ -28,10 +29,13 @@ jobs:
         with:
           name: gen-tex-files-artifacts
           path: dist/
-      - run: cp resources/mcdowellcv.cls dist
+      - run: cp resources/mcdowellcv.cls resources/two-column.cls dist
+      - run: cp -r resources/fonts dist
       - run: lualatex resume.tex
         working-directory: dist/
       - run: lualatex resume-simple.tex
+        working-directory: dist/
+      - run: lualatex two-column.tex
         working-directory: dist/
       - name: upload generated pdf
         uses: actions/upload-artifact@v6

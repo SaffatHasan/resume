@@ -1,0 +1,243 @@
+%--------------------------------------
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+%
+%--------------------------------------
+%
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+%
+%--------------------------------------
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%--------------------------------------
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%--------------------------------------
+
+
+
+\documentclass[]{two-column}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+
+% ATS READABILITY
+
+% \input{glyphtounicode}
+% \pdfgentounicode=1
+
+\begin{document}
+
+%--------------------------------------
+%
+%     LAST UPDATED DATE
+%
+%--------------------------------------
+
+%--------------------------------------
+%
+%     TITLE NAME
+%
+%--------------------------------------
+\namesection {}{\VAR{contact.name}}{ \urlstyle{same}
+\VAR{contact.phone} | \href{mailto:\VAR{contact.email}}{\VAR{contact.email}}\\
+\href{https://\VAR{contact.linkedin}}{LinkedIn} |
+\href{https://\VAR{contact.github}}{GitHub} |
+\href{https://\VAR{contact.website}}{\VAR{contact.website}}
+}
+
+%--------------------------------------
+%
+%     COLUMN ONE
+%
+%--------------------------------------
+
+\begin{minipage}[t]{0.33\textwidth}
+
+%--------------------------------------
+%     EDUCATION
+%--------------------------------------
+
+\section{Education}
+%% for school in education
+\subsection{\VAR{school.name}}
+\vspace{1pt}
+\descript{\VAR{school.description}}
+\location{\VAR{school.graduation} | \VAR{school.locaton}}
+% \vspace{1pt}
+% College of Computing and Informatics \\
+% \vspace{1pt}
+% \location{ Cum. GPA: 3.68 / 4.0 }
+% \vspace{3pt}
+% \descript{Concentrations:}
+% Machine Learning\\
+% Data Structures and Algorithms\\
+% \vspace{3pt}
+% \descript {Minors:}
+%  Finance \\
+%  Mathematics \\
+%  \vspace{3pt}
+%  \descript{Awards:}
+% A.J Drexel Scholarship \\
+% Dean’s List September 2018 - Present\\
+%% endfor
+\sectionsep
+
+
+%--------------------------------------
+%     LINKS
+%--------------------------------------
+
+% \section{Links}
+% Facebook:// \href{https://facebook/dd}{\bf dd} \\
+% Github:// \href{https://github.com/deedydas}{\bf deedydas} \\
+% LinkedIn://  \href{https://www.linkedin.com/in/debarghyadas}{\bf debarghyadas} \\
+% YouTube://  \href{https://www.youtube.com/user/DeedyDash007}{\bf DeedyDash007} \\
+% Twitter://  \href{https://twitter.com/debarghya_das}{\bf @debarghya\_das} \\
+% Quora://  \href{https://www.quora.com/Debarghya-Das}{\bf Debarghya-Das}
+
+
+%--------------------------------------
+%     SKILLS
+%--------------------------------------
+
+\section{Skills}
+\vspace{1pt}
+\subsection{Proficient}
+%% for skill in skills.proficient
+\VAR{skill} \textbullet{} % TODO(if not last)
+%% endfor
+\vspace{1pt}
+\subsection{Familiar}
+%% for skill in skills.familiar
+\VAR{skill} \textbullet{} % TODO(if not last)
+%% endfor
+% \subsection{Languages}
+% \vspace{1pt}
+% Python \textbullet{}   Java \textbullet{} C \textbullet{} Dart \textbullet{} JavaScript
+%  Haskell \textbullet{} Racket \textbullet{} MySQL \textbullet{} LaTeX\ \\
+% \vspace{5pt}
+% \subsection{Frameworks / Packages}
+% \vspace{1pt}
+% Flutter \textbullet{} Django \textbullet{} Express \textbullet{} Node Pandas \textbullet{} NumPy \textbullet{} Matplotlib Scikit-learn \textbullet{} Openpyxl \textbullet{} SciPy
+% \vspace{5pt}
+% \subsection{Tools}
+% \vspace{1pt}
+% Git \textbullet{} Jupyter \textbullet{} Insightly \textbullet{} MongoDB Firebase \textbullet{} PyCharm \textbullet{} IntelliJ \textbullet{} Figma VSCode \textbullet{} Bloomberg \textbullet{} Bash \\
+% \vspace{5pt}
+% \subsection{Statistics / ML}
+% \vspace{1pt}
+% Linear/Logistic Regression \textbullet{} PCR\\
+% Decomposition \textbullet{} Decision Trees\\
+% Graph Theory \textbullet{} Statistical Analysis\\
+
+\sectionsep
+
+%--------------------------------------
+%     COURSEWORK
+%--------------------------------------
+
+% \section{Coursework}
+% \vspace{1pt}
+% \subsection{Undergraduate}
+% \vspace{3pt}\
+% Artificial Intelligence 1, 2\\
+% Machine Learning\\
+% Data Structures and Algorithms 1, 2\\
+% Linear Algebra and Statistics 1, 2\\
+% Calculus 1, 2, 3, 4 \\
+% Discrete Mathematics \\
+% Web and Mobile Development\\
+% Adv Object-Oriented Python 1, 2 \\
+% Software and Systems Architecture \\
+% Financial Institutions and Markets \\
+% Investment Securities\\
+% \sectionsep
+
+
+%--------------------------------------
+%
+%     COLUMN TWO
+%
+%--------------------------------------
+
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.66\textwidth}
+
+%--------------------------------------
+%     EXPERIENCE
+%--------------------------------------
+
+\section{Experience}
+%% for job in experience
+\runsubsection{\VAR{job.employer}}
+\descript{| \VAR{job.title}}
+\location{\VAR{job.duration} | \VAR{job.location}}
+\vspace{\topsep}
+\begin{tightemize}
+%% for item in job.summary_items
+\item \VAR{item}
+\vspace{1pt}
+%% endfor
+\end{tightemize}
+\sectionsep
+%% endfor
+\vspace{-5pt}
+
+
+%--------------------------------------
+% PROJECTS
+%--------------------------------------
+\section{Projects}
+%% for project in projects[:0]
+\runsubsection{\VAR{project.name}}
+\descript{| \VAR{project.title}}
+\location{\VAR{project.duration} | \VAR{project.sponsor}}
+\begin{tightemize}
+%% for item in project.summary_items
+\vspace{1pt}
+\item \VAR{item}
+%% endfor
+\end{tightemize}
+\sectionsep %TODO if not last
+%% endfor
+
+%--------------------------------------
+% ACTIVITIES
+%--------------------------------------
+% \section{Activities}
+% Beta Chi Theta Fraternity Inc (Vice president of Internal Affairs), International Students Union (Event Coordinator), Resident Assistant
+
+\end{minipage}
+\end{document}  \documentclass[]{article}

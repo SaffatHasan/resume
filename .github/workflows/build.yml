@@ -19,7 +19,7 @@ jobs:
 
   generate-pdf-files:
     runs-on: ubuntu-latest
-    container: blang/latex:ubuntu
+    container: texlive/texlive:latest
     needs: gen-tex-files
     steps:
       - uses: actions/checkout@v2

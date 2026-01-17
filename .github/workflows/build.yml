@@ -12,7 +12,7 @@ jobs:
       - run: python src/main.py resume
       - run: python src/main.py resume-simple
       - name: upload generated latex
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v6
         with:
           name: gen-tex-files-artifacts
           path: dist/*.tex
@@ -24,7 +24,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: copy artifact from gen-tex-files-artifacts
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v6
         with:
           name: gen-tex-files-artifacts
           path: dist/
@@ -34,7 +34,7 @@ jobs:
       - run: lualatex resume-simple.tex
         working-directory: dist/
       - name: upload generated pdf
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v6
         with:
           name: generate-pdf-artifacts
           path: dist/*.pdf
@@ -47,7 +47,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: copy artifact from generate-pdf-artifacts
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v6
         with:
           name: generate-pdf-artifacts
           path: publish/

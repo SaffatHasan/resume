@@ -29,9 +29,9 @@ jobs:
           name: gen-tex-files-artifacts
           path: dist/
       - run: cp resources/mcdowellcv.cls dist
-      - run: lualatex resume.tex
+      - run: pdflatex resume.tex
         working-directory: dist/
-      - run: lualatex resume-simple.tex
+      - run: pdflatex resume-simple.tex
         working-directory: dist/
       - name: upload generated pdf
         uses: actions/upload-artifact@v6

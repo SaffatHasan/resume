@@ -23,7 +23,7 @@ I've achieved a reasonable level of decoupling of data from formatting (data _st
 - `templates/resume.tex`
 - `templates/resume-simple.tex`
 
-This project also leverages Github Actions to automatically generate the PDFs as build artifacts. The project automatically deploys the artifacts (resume PDFs) to the [Github Pages](https://pages.github.com/) and to [Drexel's student servers (tux)](https://www.cs.drexel.edu/~sh3292/resume.pdf).
+This project also leverages Github Actions to automatically generate the PDFs as build artifacts. The project automatically deploys the artifacts (resume PDFs) to the [Github Pages](https://pages.github.com/) .
 
 ## How to Build
 
